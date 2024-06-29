@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="media/t-icon.svg" type="image/x-icon" />
+    <link rel="shortcut icon" href="media/t-icon.svg" />
+    <link rel="apple-touch-icon" href="media/t-icon.svg" />
+    <meta name="color-scheme" content="light only" />
+    <link rel="stylesheet" href="scss/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>dashbord</title>
+    <script src="node_modules/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="mainContainer">
+      <!-- Start Nav -->
+      <nav>
+        <div class="logoName">
+          Spot krap
+        </div>
+        <div class="topNav">
+          <ul class="linksInner mainLinks">
+            <li class="drop">
+              <a href="index.html"
+                ><img src="../media/navIcons/host.png" alt="" /> Add Copon
+              </a>
+            </li>
+          <div class="account">
+            <div class="accInfo">
+            </div>
+            <img class="arrow" src="../media/navIcons/arrow-down.png" alt="" />
+            <ul class="dropMenu dropAcc">
+              <li>
+                <a href="profile.html"><i class="fa-solid fa-user"></i>Edit Profile</a>
+              </li>
+              
+              <li class="LogOut">
+                <a href="#"
+                id="logout-button"
+                  ><i class="fa-solid fa-arrow-right-from-bracket"></i> Log Out
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <button class="menu" id="menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+      <!-- End Nav -->
+      <!-- Start Main Content -->
+      <div class="mainContent">
+        <h1 class="hdx">Update the data</h1>
+        <div class="inst5060">
+
+          <form class="w50" action="" id="update-profile-form">
+            <div class="input pt0">
+              <span>Enter your Name</span>
+              <div class="wleetInput53">
+                <input name ="name" type="text" placeholder="Change the name"  id="name_value"/>
+            </div>
+            </div>
+            <div class="input ">
+              <span>Chose image</span>
+              <input name="avatar" type="file" class=" bmain fille " id="image_value" placeholder="Chose image...." spellcheck="false"></input>
+            </div>
+            <div class="input">
+              <span>phone Number</span>
+              <input name="phone" type="number" class=" bmain " id="phone_value" placeholder="Write phone her...." spellcheck="false"></input>
+            </div>
+            <div class="input">
+              <span>Username Number</span>
+              <input name="username" type="text" class=" bmain " id="username_value" placeholder="Write username her...." spellcheck="false"></input>
+            </div>
+            <div class="input">
+              <button class="btnForm" type="submit" id="update-profile-button">Submit</button>
+            </div>
+          </form>
+          <button type="button" class="btn  btnForm text-white" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Change password
+          </button>
+        </div>
+      </div>
+      <!-- End Main Content -->
+    </div>
+    <!-- modal tochange password -->
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Change password</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="inst5060">
+          <form class="w50" action="" id="change-password-form">
+            <div class="input pt0">
+              <span>Old Pasword</span>
+              <div class="inputSelect">         
+                <input type="text" name="old_password"  class="bmain" placeholder="Old Pasword" required>
+              </div>
+            </div>
+            <div class="input">
+              <span>New password</span>
+              <input type="text" name="new_password"  class="bmain" placeholder="New password" required>
+            </div>
+            <div class="input">
+              <span>Confirm password</span>
+              <input type="text" name="new_password_confirmation"  class="bmain" placeholder="Confirm password" required>
+            </div>
+            <div class="input">
+              <button class="btnForm" type="button" id="change-password-button">send</button>
+            </div>
+          </form>
+         
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+  <script src="js/main.js"></script>
+  <script type="module" src="api/axiosInterceptor.js"></script>
+  <script type="module" src="js/updateData.js"></script>
+  <script src="js/numInput.js"></script>
+</html>

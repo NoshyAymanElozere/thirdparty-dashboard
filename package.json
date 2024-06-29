@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "axios": "^1.6.8",
+    "react-hot-toast": "^2.4.1",
+    "toast": "^0.5.4",
+    "toastify-js": "^1.12.0"
+  }
+}
